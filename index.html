@@ -29,25 +29,73 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <button class="theme-toggle" type="button" data-theme-toggle>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">
       Dark
     </button>
   </header>
 
   <main>
     <section class="hero">
-      <p class="eyebrow">Silk Standards. Steel Evidence.</p>
-      <h1>Evidence as infrastructure. Security as culture.</h1>
-      <p class="hero-copy">
-        I connect GRC and RMF, audit-ready documentation, and security awareness through clear frameworks and visually intelligent content.
-      </p>
+      <div class="hero-content">
+        <p class="eyebrow">Silk Standards. Steel Evidence.</p>
+        <h1>Evidence as infrastructure. Security as culture.</h1>
+        <p class="hero-copy">
+          A polished GRC and cyber risk portfolio for audit-ready documentation, RMF thinking, security awareness, and visual communication that helps teams see what matters.
+        </p>
 
-      <div class="hero-actions">
-        <a class="button primary" href="portfolio.html">View Portfolio</a>
-        <a class="button secondary" href="contact.html">Discuss a Project</a>
+        <div class="hero-actions">
+          <a class="button primary" href="portfolio.html">View Portfolio</a>
+          <a class="button secondary" href="contact.html">Discuss a Project</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Portfolio positioning">
+        <div class="seal" aria-hidden="true">MD</div>
+        <p class="panel-label">Portfolio Thesis</p>
+        <p class="panel-statement">Controls need context. Evidence needs architecture.</p>
+        <ul class="panel-list">
+          <li><strong>GRC</strong><span>Policy, controls, readiness</span></li>
+          <li><strong>RMF</strong><span>Risk framing and documentation</span></li>
+          <li><strong>Awareness</strong><span>Visual learning and behavior</span></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <p class="kicker">Commercial Focus</p>
+          <h2>Quietly rigorous work for teams that need proof.</h2>
+        </div>
+        <p>
+          The site is built around recruiter-friendly clarity: what Mallory does, how she thinks, and where her documentation, analysis, and communication strengths show up.
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <span class="number">01</span>
+          <h3>Audit Documentation</h3>
+          <p>Readable artifacts that support review cycles, control narratives, and evidence discipline.</p>
+        </article>
+        <article class="card">
+          <span class="number">02</span>
+          <h3>Risk Communication</h3>
+          <p>Concise visuals and plain-language framing for security risk, impact, and next action.</p>
+        </article>
+        <article class="card">
+          <span class="number">03</span>
+          <h3>Security Culture</h3>
+          <p>Awareness content that treats people as part of the control environment, not an afterthought.</p>
+        </article>
       </div>
     </section>
   </main>
+
+  <footer class="page-footer">
+    <span>Mallory Davis</span>
+    <span>Silk Standards. Steel Evidence.</span>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
