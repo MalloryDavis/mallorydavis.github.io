@@ -573,6 +573,80 @@ h2 {
   outline-offset: 4px;
 }
 
+.home-page {
+  padding-bottom: 0;
+}
+
+.home-page .hero {
+  min-height: min(880px, calc(100svh - 80px));
+}
+
+.home-page .hero-content {
+  padding-top: clamp(8px, 2vw, 22px);
+}
+
+.home-page .hero-panel {
+  overflow: hidden;
+}
+
+.home-page .proof-strip {
+  isolation: isolate;
+}
+
+.home-page .featured-section {
+  padding-top: clamp(70px, 8vw, 112px);
+}
+
+.home-page .work-card {
+  border-color: color-mix(in srgb, var(--border) 76%, var(--steel));
+}
+
+.home-page .work-card:hover {
+  border-color: color-mix(in srgb, var(--border-strong) 70%, var(--bronze));
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--champagne) 34%, transparent),
+    0 24px 58px rgba(69, 58, 42, 0.09);
+}
+
+.home-page .split-section {
+  border-top-color: color-mix(in srgb, var(--steel) 22%, var(--border));
+}
+
+.home-page .focus-preview {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--surface-raised) 64%, transparent), transparent),
+    transparent;
+}
+
+.home-page .focus-preview div:first-child {
+  padding-top: 28px;
+}
+
+.home-page .focus-preview div:last-child {
+  padding-bottom: 28px;
+}
+
+.home-page .luna-preview {
+  padding-top: clamp(66px, 8vw, 100px);
+}
+
+.home-page .luna-panel {
+  box-shadow: 0 18px 50px rgba(69, 58, 42, 0.045);
+}
+
+.home-page .luna-panel .kicker {
+  color: color-mix(in srgb, var(--amethyst) 82%, var(--steel));
+}
+
+.home-page .cta-section {
+  border-top-color: color-mix(in srgb, var(--bronze) 18%, var(--border));
+}
+
+body:has(.home-page) .page-footer {
+  align-items: flex-start;
+  padding-top: clamp(30px, 4vw, 44px);
+}
+
 .card,
 .feature-card,
 .contact-card {
