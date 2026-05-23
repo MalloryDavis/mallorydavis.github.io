@@ -104,7 +104,6 @@ a {
   white-space: nowrap;
 }
 
-.brand-mark,
 .seal {
   position: relative;
   display: grid;
@@ -119,7 +118,6 @@ a {
     var(--surface);
 }
 
-.brand-mark::before,
 .seal::before {
   content: "";
   position: absolute;
@@ -128,7 +126,6 @@ a {
   border-radius: inherit;
 }
 
-.brand-mark::after,
 .seal::after {
   content: "";
   position: absolute;
@@ -138,16 +135,43 @@ a {
   transform: rotate(-35deg);
 }
 
-body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .brand-mark::after,
 body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .seal::after {
   background: color-mix(in srgb, var(--amethyst) 58%, var(--steel));
 }
 
 .brand-mark {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
   width: 46px;
   height: 46px;
-  font-size: 0.96rem;
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--champagne) 52%, transparent);
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  line-height: 0;
+  padding: 0;
+}
+
+.brand-logo {
+  grid-area: 1 / 1;
+  display: block;
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.brand-logo-dark {
+  display: none;
+}
+
+[data-theme="dark"] .brand-logo-light {
+  display: none;
+}
+
+[data-theme="dark"] .brand-logo-dark {
+  display: block;
 }
 
 .brand-text {
