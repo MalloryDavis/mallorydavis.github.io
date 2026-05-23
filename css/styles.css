@@ -831,6 +831,132 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   color: var(--heading);
 }
 
+.portfolio-page .portfolio-hero {
+  min-height: min(780px, calc(100svh - 80px));
+}
+
+.portfolio-page .hero-copy {
+  max-width: 720px;
+}
+
+.portfolio-intro {
+  padding-top: clamp(54px, 7vw, 88px);
+}
+
+.case-study-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.85fr);
+  gap: clamp(24px, 4vw, 52px);
+  align-items: start;
+  padding: clamp(28px, 5vw, 52px);
+  border: 1px solid color-mix(in srgb, var(--border-strong) 72%, var(--border));
+  background:
+    linear-gradient(130deg, color-mix(in srgb, var(--champagne) 16%, transparent), transparent 52%),
+    color-mix(in srgb, var(--surface-raised) 90%, transparent);
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--champagne) 28%, transparent),
+    0 20px 54px rgba(69, 58, 42, 0.07);
+}
+
+.case-study-card h3,
+.artifact-card h3 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.case-study-card h3 {
+  max-width: 20ch;
+  font-size: clamp(1.95rem, 3.4vw, 3.1rem);
+  line-height: 1.02;
+}
+
+.case-study-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.case-study-card .button {
+  align-self: end;
+  justify-self: start;
+  white-space: nowrap;
+}
+
+.artifact-section {
+  padding-top: clamp(62px, 8vw, 104px);
+}
+
+.artifact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.artifact-card {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  min-height: 344px;
+  padding: clamp(24px, 3vw, 32px);
+  border: 1px solid color-mix(in srgb, var(--border) 86%, var(--border-strong));
+  background:
+    linear-gradient(155deg, color-mix(in srgb, var(--surface-raised) 94%, transparent), color-mix(in srgb, var(--surface) 82%, transparent)),
+    var(--surface);
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--champagne) 28%, transparent),
+    0 18px 44px rgba(69, 58, 42, 0.055);
+}
+
+.artifact-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--bronze), var(--champagne), var(--steel));
+}
+
+.artifact-card h3 {
+  max-width: 17ch;
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  line-height: 1.08;
+}
+
+.artifact-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.68;
+}
+
+.artifact-card a {
+  width: fit-content;
+  color: var(--heading);
+  font-weight: 850;
+  text-decoration-color: color-mix(in srgb, var(--bronze) 58%, transparent);
+  text-underline-offset: 5px;
+}
+
+.case-study-card .meta,
+.artifact-card .meta {
+  color: var(--bronze);
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.portfolio-page .tag-list {
+  margin-top: 0;
+}
+
+.portfolio-page .tag-list li {
+  border-color: color-mix(in srgb, var(--border) 82%, var(--steel));
+}
+
 @media (max-width: 920px) {
   .site-header {
     grid-template-columns: 1fr auto;
@@ -847,7 +973,8 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   .statement-band,
   .split-section,
   .luna-panel,
-  .cta-section {
+  .cta-section,
+  .case-study-card {
     grid-template-columns: 1fr;
   }
 
@@ -862,7 +989,8 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 
   .grid,
   .grid.two,
-  .work-grid {
+  .work-grid,
+  .artifact-grid {
     grid-template-columns: 1fr;
   }
 
@@ -880,6 +1008,10 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   }
 
   .luna-panel .button {
+    width: fit-content;
+  }
+
+  .case-study-card .button {
     width: fit-content;
   }
 }
@@ -958,6 +1090,10 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   }
 
   .work-card {
+    min-height: 300px;
+  }
+
+  .artifact-card {
     min-height: 300px;
   }
 
