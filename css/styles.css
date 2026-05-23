@@ -705,22 +705,6 @@ h3 {
   font-weight: 700;
 }
 
-.placeholder-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  min-height: 38px;
-  border: 1px solid color-mix(in srgb, var(--border) 80%, var(--steel));
-  border-radius: 999px;
-  padding: 8px 12px;
-  color: color-mix(in srgb, var(--muted) 88%, var(--heading));
-  background: color-mix(in srgb, var(--surface) 72%, transparent);
-  font-size: 0.82rem;
-  font-weight: 800;
-  line-height: 1;
-}
-
 .statement-band {
   display: grid;
   grid-template-columns: 0.7fr 1fr;
@@ -926,6 +910,10 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   background: color-mix(in srgb, var(--surface-raised) 86%, transparent);
 }
 
+.contact-options-grid:has(.contact-option-card:only-child) {
+  grid-template-columns: minmax(0, 0.58fr);
+}
+
 .contact-option-card {
   display: grid;
   align-content: start;
@@ -939,7 +927,7 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   border-right: 0;
 }
 
-.contact-option-card > span:not(.placeholder-link) {
+.contact-option-card > span {
   width: fit-content;
   border: 1px solid color-mix(in srgb, var(--border-strong) 72%, var(--champagne));
   border-radius: 999px;
@@ -979,12 +967,6 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   font-weight: 800;
   text-decoration-color: color-mix(in srgb, var(--bronze) 54%, transparent);
   text-underline-offset: 4px;
-}
-
-.contact-option-card .placeholder-link,
-.artifact-card .placeholder-link {
-  align-self: end;
-  margin-top: auto;
 }
 
 .contact-link-note {
@@ -1100,11 +1082,6 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   align-self: end;
   justify-self: start;
   white-space: nowrap;
-}
-
-.case-study-card .placeholder-link {
-  align-self: end;
-  justify-self: start;
 }
 
 .artifact-section {
