@@ -1223,6 +1223,38 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   box-shadow: none;
 }
 
+.working-index {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
+}
+
+.working-index article {
+  padding: clamp(24px, 3vw, 34px) clamp(18px, 2.8vw, 30px);
+  border-right: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
+}
+
+.working-index article:last-child {
+  border-right: 0;
+}
+
+.working-index h3 {
+  margin: 0 0 14px;
+  color: var(--heading);
+  font-family: var(--font-editorial);
+  font-size: clamp(1.28rem, 1.9vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.018em;
+}
+
+.working-index p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .pathway-section {
   padding-top: clamp(42px, 6vw, 74px);
 }
@@ -1783,6 +1815,19 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   }
 
   .signal-strip div:last-child {
+    border-bottom: 0;
+  }
+
+  .working-index {
+    grid-template-columns: 1fr;
+  }
+
+  .working-index article {
+    border-right: 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
+  }
+
+  .working-index article:last-child {
     border-bottom: 0;
   }
 
