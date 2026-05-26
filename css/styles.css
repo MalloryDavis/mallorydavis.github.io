@@ -1105,6 +1105,13 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   letter-spacing: -0.025em;
 }
 
+.case-study-card h3 a,
+.artifact-card h3 a {
+  color: inherit;
+  text-decoration-color: color-mix(in srgb, var(--bronze) 48%, transparent);
+  text-underline-offset: 5px;
+}
+
 .case-study-card h3 {
   max-width: 20ch;
   font-size: clamp(1.95rem, 3.4vw, 3.1rem);
