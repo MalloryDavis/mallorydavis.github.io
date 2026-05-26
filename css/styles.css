@@ -1514,6 +1514,125 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   line-height: 1.64;
 }
 
+.series-sequence-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(320px, 0.94fr);
+  gap: clamp(34px, 6vw, 78px);
+  align-items: start;
+}
+
+.sequence-list {
+  display: grid;
+  border-top: 1px solid color-mix(in srgb, var(--amethyst) 28%, var(--border-strong));
+}
+
+.sequence-list div {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.42fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sequence-list span,
+.archive-group > h3,
+.archive-entry .meta {
+  color: color-mix(in srgb, var(--amethyst) 78%, var(--steel));
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sequence-list p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.64;
+}
+
+.archive-group {
+  display: grid;
+  gap: 18px;
+  margin-top: clamp(34px, 5vw, 56px);
+}
+
+.archive-group:first-of-type {
+  margin-top: 0;
+}
+
+.archive-group > h3 {
+  margin: 0;
+  color: color-mix(in srgb, var(--amethyst) 82%, var(--steel));
+}
+
+.archive-entry {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(20px, 4vw, 42px);
+  align-items: start;
+  padding: clamp(22px, 3vw, 32px) 0;
+  border-top: 1px solid color-mix(in srgb, var(--amethyst) 18%, var(--border));
+}
+
+.archive-entry h4 {
+  margin: 8px 0 0;
+  color: var(--heading);
+  font-family: var(--font-editorial);
+  font-size: clamp(1.4rem, 2.1vw, 2rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.archive-entry a {
+  color: inherit;
+}
+
+.archive-entry h4 a,
+.archive-text-link {
+  text-decoration-color: color-mix(in srgb, var(--amethyst) 42%, transparent);
+  text-underline-offset: 5px;
+}
+
+.archive-text-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--heading);
+  font-weight: 800;
+}
+
+.archive-preview-grid,
+.archive-sequence-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.archive-sequence-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.archive-image-link,
+.archive-preview-grid a,
+.archive-sequence-grid a {
+  display: block;
+  border: 1px solid color-mix(in srgb, var(--amethyst) 18%, var(--border));
+  background: color-mix(in srgb, var(--surface-raised) 92%, transparent);
+}
+
+.archive-image-link img,
+.archive-preview-grid img,
+.archive-sequence-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.archive-image-link {
+  max-width: 520px;
+}
+
 .luna-value-panel {
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(280px, 0.68fr);
@@ -1681,6 +1800,7 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   .connection-section,
   .focus-cta,
   .luna-formats,
+  .series-sequence-section,
   .luna-value-panel,
   .luna-cta,
   .foundation-section,
@@ -1746,6 +1866,15 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 
   .contact-page .contact-hero {
     min-height: auto;
+  }
+
+  .archive-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-preview-grid,
+  .archive-sequence-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1877,6 +2006,7 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   .focus-preview div,
   .connection-list div,
   .format-list div,
+  .sequence-list div,
   .foundation-list div {
     grid-template-columns: 1fr;
     gap: 8px;
