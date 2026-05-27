@@ -1082,6 +1082,54 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   padding-top: clamp(54px, 7vw, 88px);
 }
 
+.portfolio-support-line {
+  max-width: 780px;
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.25vw, 1.12rem);
+  line-height: 1.68;
+}
+
+.role-alignment {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.28fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  margin-bottom: clamp(24px, 4vw, 42px);
+  padding: 20px 0;
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border);
+}
+
+.role-alignment h3 {
+  margin: 0;
+  color: var(--bronze);
+  font-family: var(--font-interface);
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.role-alignment ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.role-alignment li {
+  border: 1px solid color-mix(in srgb, var(--border) 82%, var(--steel));
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: var(--muted);
+  background: color-mix(in srgb, var(--surface-raised) 86%, transparent);
+  font-size: 0.78rem;
+  font-weight: 760;
+}
+
 .case-study-card {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.85fr);
