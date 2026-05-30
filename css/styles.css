@@ -1441,6 +1441,22 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   color: color-mix(in srgb, var(--amethyst) 82%, var(--steel));
 }
 
+.luna-risk-page .panel-list {
+  margin-top: 22px;
+}
+
+.luna-risk-page .panel-list li {
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+  justify-content: initial;
+}
+
+.luna-risk-page .panel-list span {
+  text-align: left;
+}
+
 .luna-definition {
   padding-top: clamp(54px, 7vw, 88px);
 }
