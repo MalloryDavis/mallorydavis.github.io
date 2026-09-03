@@ -38,18 +38,21 @@ const intakePanels = document.querySelectorAll(".intake-panel");
 intakeTabs.forEach((tab) => {
   tab.addEventListener("click", () => {
     const targetId = tab.dataset.intakeTab;
+    const isClosing = tab.classList.contains("is-active");
 
     intakeTabs.forEach((item) => {
-      const isActive = item === tab;
+      const isActive = !isClosing && item === tab;
       item.classList.toggle("is-active", isActive);
-      item.setAttribute("aria-selected", String(isActive));
+      item.setAttribute("aria-expanded", String(isActive));
     });
 
     intakePanels.forEach((panel) => {
-      panel.hidden = panel.id !== targetId;
+      panel.hidden = isClosing || panel.id !== targetId;
     });
 
-    document.getElementById(targetId)?.querySelector("input, select, textarea")?.focus();
+    if (!isClosing) {
+      document.getElementById(targetId)?.querySelector("input, select, textarea")?.focus();
+    }
   });
 });
 

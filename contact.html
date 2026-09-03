@@ -8,7 +8,7 @@
   <meta property="og:title" content="Contact | Mallory Davis" />
   <meta property="og:description" content="Choose a short inquiry path for a professional opportunity or defined project need." />
   <meta property="og:type" content="website" />
-  <link rel="stylesheet" href="css/styles.css?v=20260903-5" />
+  <link rel="stylesheet" href="css/styles.css?v=20260903-6" />
 </head>
 
 <body>
@@ -58,12 +58,18 @@
         <p>Select one path. The website does not store or send your answers.</p>
       </div>
 
-      <div class="intake-tabs" role="tablist" aria-label="Choose an inquiry type">
-        <button class="intake-tab is-active" id="opportunity-tab" type="button" role="tab" aria-selected="true" aria-controls="opportunity-panel" data-intake-tab="opportunity-panel">Professional opportunity</button>
-        <button class="intake-tab" id="project-tab" type="button" role="tab" aria-selected="false" aria-controls="project-panel" data-intake-tab="project-panel">Project need</button>
+      <div class="intake-tabs" aria-label="Choose an inquiry type">
+        <button class="intake-tab" id="opportunity-tab" type="button" aria-expanded="false" aria-controls="opportunity-panel" data-intake-tab="opportunity-panel">
+          <strong>Professional Opportunity</strong>
+          <span>Employment, subcontracting, or partnership.</span>
+        </button>
+        <button class="intake-tab" id="project-tab" type="button" aria-expanded="false" aria-controls="project-panel" data-intake-tab="project-panel">
+          <strong>Project Need</strong>
+          <span>A defined outcome, deliverable, or workstream.</span>
+        </button>
       </div>
 
-      <div class="intake-panel" id="opportunity-panel" role="tabpanel" aria-labelledby="opportunity-tab">
+      <div class="intake-panel" id="opportunity-panel" role="region" aria-labelledby="opportunity-tab" hidden>
         <div class="intake-intro">
           <p class="kicker">Professional Opportunity</p>
           <h3>Employment, subcontracting, or partnership</h3>
@@ -85,7 +91,7 @@
         </form>
       </div>
 
-      <div class="intake-panel" id="project-panel" role="tabpanel" aria-labelledby="project-tab" hidden>
+      <div class="intake-panel" id="project-panel" role="region" aria-labelledby="project-tab" hidden>
         <div class="intake-intro">
           <p class="kicker">Project Need</p>
           <h3>A defined outcome or workstream</h3>
@@ -129,6 +135,6 @@
       <span>Evidence as infrastructure. Security as culture.</span>
     </div>
   </footer>
-  <script src="js/main.js?v=20260903-5"></script>
+  <script src="js/main.js?v=20260903-6"></script>
 </body>
 </html>
