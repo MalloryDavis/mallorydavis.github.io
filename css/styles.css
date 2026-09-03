@@ -510,6 +510,10 @@ h1 {
   border-bottom: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
 }
 
+.home-capability-strip {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .signal-strip div {
   padding: clamp(18px, 2.4vw, 28px);
   border-right: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
@@ -1285,6 +1289,24 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   border-bottom: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
 }
 
+.home-working-index {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.page-footer .footer-contact {
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+  text-align: right;
+}
+
+.footer-contact a {
+  color: var(--heading);
+  font-weight: 700;
+  text-decoration-color: color-mix(in srgb, var(--bronze) 58%, transparent);
+  text-underline-offset: 4px;
+}
+
 .working-index article {
   padding: clamp(24px, 3vw, 34px) clamp(18px, 2.8vw, 30px);
   border-right: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
@@ -1858,7 +1880,13 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 
   .site-nav {
     grid-column: 1 / -1;
+    grid-row: 2;
     justify-content: flex-start;
+  }
+
+  .theme-toggle {
+    grid-column: 2;
+    grid-row: 1;
   }
 
   .hero,
@@ -1916,6 +1944,21 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   .proof-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-top: 0;
+  }
+
+  .home-capability-strip,
+  .home-working-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-capability-strip div:nth-child(2),
+  .home-working-index article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .home-capability-strip div:nth-child(-n + 2),
+  .home-working-index article:nth-child(-n + 2) {
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
   }
 
   .proof-strip a:nth-child(2) {
@@ -2015,6 +2058,11 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
     grid-template-columns: 1fr;
   }
 
+  .home-capability-strip,
+  .home-working-index {
+    grid-template-columns: 1fr;
+  }
+
   .signal-strip div {
     border-right: 0;
     border-bottom: 1px solid color-mix(in srgb, var(--border) 86%, transparent);
@@ -2035,6 +2083,11 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 
   .working-index article:last-child {
     border-bottom: 0;
+  }
+
+  .page-footer .footer-contact {
+    justify-items: start;
+    text-align: left;
   }
 
   .proof-strip a,
