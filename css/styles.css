@@ -564,6 +564,13 @@ h1 {
   background: linear-gradient(90deg, var(--bronze), color-mix(in srgb, var(--champagne) 72%, var(--bronze)));
 }
 
+.capability-statement {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  line-height: 1.58;
+}
+
 .section::before {
   content: "";
   position: absolute;
