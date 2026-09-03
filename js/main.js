@@ -31,3 +31,51 @@ document.querySelectorAll(".site-nav a").forEach((link) => {
     link.setAttribute("aria-current", "page");
   }
 });
+
+const intakeTabs = document.querySelectorAll("[data-intake-tab]");
+const intakePanels = document.querySelectorAll(".intake-panel");
+
+intakeTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const targetId = tab.dataset.intakeTab;
+
+    intakeTabs.forEach((item) => {
+      const isActive = item === tab;
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-selected", String(isActive));
+    });
+
+    intakePanels.forEach((panel) => {
+      panel.hidden = panel.id !== targetId;
+    });
+
+    document.getElementById(targetId)?.querySelector("input, select, textarea")?.focus();
+  });
+});
+
+document.querySelectorAll("[data-intake-form]").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) {
+      return;
+    }
+
+    const formData = new FormData(form);
+    const inquiryType = form.dataset.inquiryType;
+    const organization = formData.get("Organization");
+    const subject = `${inquiryType}: ${organization}`;
+    const lines = [
+      inquiryType,
+      "",
+      ...Array.from(formData.entries())
+        .filter(([, value]) => String(value).trim())
+        .map(([label, value]) => `${label}: ${String(value).trim()}`),
+      "",
+      "I would like to discuss the remaining context in conversation."
+    ];
+
+    const mailto = `mailto:md.mallorydavis@proton.me?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+    window.location.href = mailto;
+  });
+});

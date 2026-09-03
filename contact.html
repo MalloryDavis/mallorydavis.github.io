@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Contact | Mallory Davis</title>
-  <meta
-    name="description"
-    content="Contact Mallory Davis for aligned GRC/RMF opportunities, audit artifacts, awareness, and risk communication."
-  />
-
-  <link rel="stylesheet" href="css/styles.css?v=20260903-4" />
+  <meta name="description" content="Contact Mallory Davis about Technology Risk and GRC employment, project work, subcontracting, or professional partnership." />
+  <meta property="og:title" content="Contact | Mallory Davis" />
+  <meta property="og:description" content="Choose a short inquiry path for a professional opportunity or defined project need." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="css/styles.css?v=20260903-5" />
 </head>
 
 <body>
@@ -22,7 +20,6 @@
       </span>
       <span class="brand-text">Mallory Davis</span>
     </a>
-
     <nav class="site-nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="portfolio.html">Portfolio</a>
@@ -31,114 +28,107 @@
       <a href="about.html">About</a>
       <a href="contact.html" aria-current="page">Contact</a>
     </nav>
-
-    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">
-      Dark
-    </button>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">Dark</button>
   </header>
 
   <main class="contact-page">
-    <section class="hero contact-hero">
+    <section class="hero contact-hero" aria-labelledby="contact-title">
       <div class="hero-content">
         <p class="eyebrow">Contact</p>
-        <h1 class="page-title">For work that needs structure before it scales.</h1>
-        <p class="hero-copy">
-          GRC/RMF support, audit documentation, awareness, and visual systems.
-        </p>
+        <h1 class="page-title" id="contact-title">Start with the information needed to assess fit.</h1>
+        <p class="hero-copy">Choose the inquiry that matches your reason for reaching out. Each path prepares a concise email for your review.</p>
       </div>
-
-      <aside class="contact-card" aria-label="Contact options">
-        <p class="panel-label">Direct Contact</p>
-        <p class="panel-statement"><a href="mailto:davis.malloryj@gmail.com">davis.malloryj@gmail.com</a></p>
-        <div class="button-row">
-          <a class="button primary" href="mailto:davis.malloryj@gmail.com">Email Me</a>
-          <a class="button secondary" href="portfolio.html">Selected Work</a>
-        </div>
+      <aside class="hero-panel" aria-label="Contact process">
+        <p class="panel-label">What Happens Next</p>
+        <ol class="contact-steps">
+          <li><span>01</span><p>Choose the appropriate inquiry.</p></li>
+          <li><span>02</span><p>Provide the essential facts.</p></li>
+          <li><span>03</span><p>Review the email before sending.</p></li>
+          <li><span>04</span><p>Discuss nuance in conversation if there is alignment.</p></li>
+        </ol>
       </aside>
     </section>
 
-    <section class="section inquiry-section" aria-labelledby="inquiry-title">
+    <section class="section intake-section" aria-labelledby="intake-title">
       <div class="section-header">
         <div>
-          <p class="eyebrow">Inquiry Areas</p>
-          <h2 id="inquiry-title">Selective support for structured work.</h2>
+          <p class="kicker">Inquiry Type</p>
+          <h2 id="intake-title">What brings you here?</h2>
         </div>
-        <p>
-          Control requirements, records, and communication shaped into usable material.
-        </p>
+        <p>Select one path. The website does not store or send your answers.</p>
       </div>
 
-      <div class="inquiry-grid">
-        <article class="inquiry-card">
-          <h3>GRC/RMF support</h3>
-          <p>Control mapping, package structure, POA&amp;M thinking, and risk documentation.</p>
-        </article>
+      <div class="intake-tabs" role="tablist" aria-label="Choose an inquiry type">
+        <button class="intake-tab is-active" id="opportunity-tab" type="button" role="tab" aria-selected="true" aria-controls="opportunity-panel" data-intake-tab="opportunity-panel">Professional opportunity</button>
+        <button class="intake-tab" id="project-tab" type="button" role="tab" aria-selected="false" aria-controls="project-panel" data-intake-tab="project-panel">Project need</button>
+      </div>
 
-        <article class="inquiry-card">
-          <h3>Audit documentation</h3>
-          <p>Control narratives, evidence organization, and materials ready for review.</p>
-        </article>
+      <div class="intake-panel" id="opportunity-panel" role="tabpanel" aria-labelledby="opportunity-tab">
+        <div class="intake-intro">
+          <p class="kicker">Professional Opportunity</p>
+          <h3>Employment, subcontracting, or partnership</h3>
+          <p>Provide enough information to understand the opportunity and determine whether a conversation makes sense.</p>
+        </div>
+        <form class="intake-form" data-intake-form data-inquiry-type="Professional opportunity">
+          <div class="field-grid">
+            <label><span>Name</span><input type="text" name="Name" autocomplete="name" required /></label>
+            <label><span>Professional email</span><input type="email" name="Email" autocomplete="email" required /></label>
+            <label><span>Organization</span><input type="text" name="Organization" autocomplete="organization" required /></label>
+            <label><span>Opportunity type</span><select name="Opportunity type" required><option value="">Select one</option><option>Employment</option><option>Subcontracting</option><option>Professional partnership</option></select></label>
+            <label class="field-wide"><span>Role or work area</span><input type="text" name="Role or work area" required /></label>
+            <label class="field-wide"><span>Why does this appear aligned?</span><textarea name="Reason for alignment" rows="4" maxlength="500" required></textarea><small>500 characters maximum</small></label>
+            <label><span>Decision timeline</span><select name="Decision timeline" required><option value="">Select one</option><option>Within two weeks</option><option>Within one month</option><option>One to three months</option><option>Exploratory</option></select></label>
+            <label><span>Preferred conversation</span><select name="Preferred conversation" required><option value="">Select one</option><option>Video call</option><option>Phone call</option><option>Either works</option></select></label>
+          </div>
+          <button class="button primary" type="submit">Prepare email</button>
+          <p class="form-note">Nothing is sent until you review and send the message in your email application.</p>
+        </form>
+      </div>
 
-        <article class="inquiry-card">
-          <h3>Security awareness</h3>
-          <p>Content for cyber behavior, control habits, and practical recall.</p>
-        </article>
-
-        <article class="inquiry-card">
-          <h3>Visual risk communication</h3>
-          <p>Diagrams, explainers, and structured visuals for risk and controls.</p>
-        </article>
-
-        <article class="inquiry-card">
-          <h3>Visual Systems &amp; Digital Presence</h3>
-          <p>Websites, portfolios, brand systems, and content structure for expertise that needs to be understood clearly.</p>
-        </article>
+      <div class="intake-panel" id="project-panel" role="tabpanel" aria-labelledby="project-tab" hidden>
+        <div class="intake-intro">
+          <p class="kicker">Project Need</p>
+          <h3>A defined outcome or workstream</h3>
+          <p>Describe the work itself. Background and sensitive context can wait for a conversation.</p>
+        </div>
+        <form class="intake-form" data-intake-form data-inquiry-type="Project need">
+          <div class="field-grid">
+            <label><span>Name</span><input type="text" name="Name" autocomplete="name" required /></label>
+            <label><span>Professional email</span><input type="email" name="Email" autocomplete="email" required /></label>
+            <label><span>Organization</span><input type="text" name="Organization" autocomplete="organization" required /></label>
+            <label><span>Current stage</span><select name="Current stage" required><option value="">Select one</option><option>Early scoping</option><option>Active work</option><option>Preparing for review</option><option>Remediation</option></select></label>
+            <label class="field-wide"><span>Desired outcome</span><input type="text" name="Desired outcome" required /></label>
+            <label class="field-wide"><span>Requested deliverable or workstream</span><input type="text" name="Requested deliverable or workstream" required /></label>
+            <label><span>Target timeframe</span><select name="Target timeframe" required><option value="">Select one</option><option>Within two weeks</option><option>Within one month</option><option>One to three months</option><option>More than three months</option><option>Not yet defined</option></select></label>
+            <label><span>Primary stakeholder or team</span><input type="text" name="Primary stakeholder or team" required /></label>
+            <label class="field-wide"><span>Known constraints</span><textarea name="Known constraints" rows="3" maxlength="350"></textarea><small>Optional. 350 characters maximum.</small></label>
+            <label><span>Preferred conversation</span><select name="Preferred conversation" required><option value="">Select one</option><option>Video call</option><option>Phone call</option><option>Either works</option></select></label>
+          </div>
+          <button class="button primary" type="submit">Prepare email</button>
+          <p class="form-note">Nothing is sent until you review and send the message in your email application.</p>
+        </form>
       </div>
     </section>
 
-    <section class="section contact-options-section" aria-labelledby="direct-contact-title">
-      <div class="section-header">
-        <div>
-          <p class="eyebrow">Direct Contact</p>
-          <h2 id="direct-contact-title">Email is the best starting point.</h2>
-        </div>
-        <p>
-          Include the work area, context, and timeline.
-        </p>
-      </div>
-
-      <div class="contact-options-grid" aria-label="Direct contact">
-        <article class="contact-option-card">
-          <span>Email</span>
-          <h3>Direct inquiry</h3>
-          <p>For GRC/RMF, audit documentation, awareness, and visual systems work.</p>
-          <a href="mailto:davis.malloryj@gmail.com">davis.malloryj@gmail.com</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section contact-cta" aria-labelledby="explore-first-title">
+    <section class="section contact-boundary" aria-labelledby="contact-boundary-title">
       <div>
-        <p class="eyebrow">Explore First</p>
-        <h2 id="explore-first-title">Review the work before reaching out.</h2>
+        <p class="kicker">Written Context</p>
+        <h2 id="contact-boundary-title">Keep the first message focused.</h2>
       </div>
-      <div class="cta-actions">
-        <div class="button-row">
-          <a class="button primary" href="portfolio.html">Selected Work</a>
-          <a class="button secondary luna-contact-link" href="luna-risk.html">Luna Risk</a>
-        </div>
+      <div>
+        <p>Do not include confidential information, sensitive records, or a detailed personal history. If the opportunity appears aligned, background and nuance can be discussed verbally.</p>
+        <p>Prefer direct email instead? Write to <a href="mailto:md.mallorydavis@proton.me">md.mallorydavis@proton.me</a> and use the same concise structure.</p>
       </div>
     </section>
   </main>
 
   <footer class="page-footer">
-    <div>
-      <strong>Mallory Davis</strong>
-      <span>GRC/RMF, audit evidence, and security communication.</span>
+    <div><strong>Mallory Davis</strong><span>Technology Risk &amp; GRC</span></div>
+    <div class="footer-contact">
+      <a href="mailto:md.mallorydavis@proton.me">md.mallorydavis@proton.me</a>
+      <span>Evidence as infrastructure. Security as culture.</span>
     </div>
-    <span>Evidence as infrastructure. Security as culture.</span>
   </footer>
-
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=20260903-5"></script>
 </body>
 </html>
