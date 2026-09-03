@@ -1463,6 +1463,16 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   padding-block: clamp(54px, 7vw, 88px);
 }
 
+.series-location {
+  margin-top: 16px !important;
+}
+
+.series-follow {
+  display: grid;
+  justify-items: start;
+  gap: 20px;
+}
+
 .engagement-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
