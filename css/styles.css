@@ -1574,7 +1574,7 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 }
 
 .artifact-card h3 {
-  max-width: 17ch;
+  max-width: none;
   font-size: clamp(1.45rem, 2.2vw, 2rem);
   line-height: 1.08;
 }
