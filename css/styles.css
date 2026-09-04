@@ -2367,7 +2367,10 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 }
 
 .about-page .about-hero {
-  min-height: min(780px, calc(100svh - 80px));
+  grid-template-columns: minmax(0, 820px);
+  min-height: auto;
+  padding-top: clamp(68px, 9vw, 112px);
+  padding-bottom: clamp(56px, 7vw, 84px);
 }
 
 .about-page .hero-copy {
@@ -2392,8 +2395,9 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 }
 
 .about-story-heading h2 {
-  max-width: 15ch;
-  font-size: clamp(2rem, 3.4vw, 3.7rem);
+  max-width: 21ch;
+  font-size: clamp(1.9rem, 2.8vw, 3rem);
+  line-height: 1.12;
 }
 
 .about-story-copy {
@@ -2409,31 +2413,36 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   line-height: 1.82;
 }
 
-.about-story-copy .lede {
-  color: var(--heading);
-  font-family: var(--font-editorial);
-  font-size: clamp(1.28rem, 2vw, 1.72rem);
-  line-height: 1.5;
-}
-
 .about-compass-section {
-  display: grid;
-  grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1fr);
-  gap: clamp(42px, 7vw, 96px);
-  align-items: center;
+  display: block;
+  min-height: 370px;
+  margin-top: clamp(54px, 7vw, 86px);
+  margin-bottom: clamp(68px, 9vw, 112px);
+  padding: clamp(34px, 5vw, 58px);
+  padding-right: clamp(210px, 24vw, 330px);
+  border: 1px solid color-mix(in srgb, var(--border-strong) 72%, var(--border));
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--surface-raised) 96%, transparent), color-mix(in srgb, var(--bg-quiet) 72%, transparent)),
+    var(--surface);
+  box-shadow: 0 18px 48px rgba(69, 58, 42, 0.065);
+  overflow: hidden;
 }
 
 .about-compass-mark {
+  position: absolute;
+  right: clamp(34px, 5vw, 64px);
+  bottom: clamp(26px, 4vw, 48px);
   display: grid;
   place-items: center;
-  min-height: 220px;
-  padding: 12px;
+  width: clamp(138px, 16vw, 200px);
+  min-height: auto;
+  padding: 0;
 }
 
 .about-compass-logo {
   grid-area: 1 / 1;
   display: block;
-  width: min(72%, 220px);
+  width: 100%;
   height: auto;
 }
 
@@ -2450,7 +2459,8 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 }
 
 .about-compass-copy p {
-  max-width: 650px;
+  max-width: 720px;
+  margin-top: 0;
   color: var(--muted);
   line-height: 1.8;
 }
@@ -2467,36 +2477,33 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   display: block;
 }
 
-.about-document-links {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.about-resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  width: min(var(--max-width), calc(100% - 44px));
+  margin: 0 auto;
+  padding: 20px 0;
   border-top: 1px solid var(--border-strong);
   border-bottom: 1px solid var(--border-strong);
 }
 
-.about-document-links a {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 22px 24px;
-  color: var(--heading);
-  text-decoration: none;
-}
-
-.about-document-links a:first-child {
+.about-resource-links a {
+  padding: 8px clamp(18px, 2.4vw, 30px);
   border-right: 1px solid var(--border);
+  color: var(--heading);
+  font-size: 0.9rem;
+  font-weight: 750;
+  text-decoration: none;
+  text-underline-offset: 4px;
 }
 
-.about-document-links span {
-  font-family: var(--font-editorial);
-  font-size: 1.12rem;
+.about-resource-links a:first-child {
+  padding-left: 0;
 }
 
-.about-document-links strong {
-  color: var(--bronze);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.about-resource-links a:last-child {
+  border-right: 0;
 }
 
 .direction-grid {
@@ -2797,9 +2804,9 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
     max-width: 18ch;
   }
 
-  .about-compass-mark {
-    max-width: 500px;
-    min-height: 190px;
+  .about-compass-section {
+    min-height: 340px;
+    padding-right: clamp(180px, 26vw, 240px);
   }
 
   .hero-line {
@@ -2915,13 +2922,28 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
     min-height: 240px;
   }
 
-  .about-document-links {
-    grid-template-columns: 1fr;
+  .about-compass-section {
+    min-height: auto;
+    padding-right: 28px;
+    padding-bottom: 170px;
   }
 
-  .about-document-links a:first-child {
-    border-right: 0;
-    border-bottom: 1px solid var(--border);
+  .about-compass-mark {
+    right: 24px;
+    bottom: 22px;
+    width: 120px;
+  }
+
+  .about-resource-links {
+    width: min(var(--max-width), calc(100% - 32px));
+  }
+
+  .about-resource-links a {
+    padding: 8px 14px;
+  }
+
+  .about-resource-links a:first-child {
+    padding-left: 0;
   }
 
   .inquiry-card {
