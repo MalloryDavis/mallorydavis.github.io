@@ -1642,7 +1642,7 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
   gap: 18px;
 }
 
@@ -1691,7 +1691,7 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 }
 
 .service-card h3 {
-  max-width: 23ch;
+  max-width: none;
   margin: 0;
   font-family: var(--font-editorial);
   font-size: clamp(1.65rem, 2.25vw, 2.12rem);
@@ -1768,7 +1768,21 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 }
 
 .services-page .engagement-section {
+  grid-template-columns: 1fr;
+  gap: clamp(30px, 4vw, 46px);
   padding-block: clamp(58px, 7vw, 88px);
+}
+
+.engagement-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.engagement-heading .kicker,
+.engagement-heading .button-row {
+  margin: 0;
 }
 
 .output-list {
@@ -2997,6 +3011,11 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 
   .service-card {
     min-height: auto;
+  }
+
+  .engagement-heading {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .services-cta .cta-actions {
