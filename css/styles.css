@@ -1606,6 +1606,16 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   margin-top: 0;
 }
 
+.portfolio-page .case-study-card .tag-list {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 821px) {
+  .portfolio-page .tag-list {
+    flex-wrap: nowrap;
+  }
+}
+
 .portfolio-page .tag-list li {
   border-color: color-mix(in srgb, var(--border) 82%, var(--steel));
   padding: 5px 9px;
