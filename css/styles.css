@@ -286,7 +286,7 @@ main {
 }
 
 .home-hero {
-  grid-template-columns: minmax(0, 1fr) minmax(310px, 0.62fr);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.64fr);
   min-height: min(680px, calc(100svh - 83px));
 }
 
@@ -294,33 +294,53 @@ main {
   max-width: 780px;
 }
 
-.compass-principles {
-  position: relative;
-  padding: clamp(28px, 3vw, 38px);
-  border: 1px solid color-mix(in srgb, var(--border-strong) 72%, var(--border));
-  background:
-    linear-gradient(145deg, color-mix(in srgb, var(--surface-raised) 96%, transparent), color-mix(in srgb, var(--bg-quiet) 76%, transparent)),
-    var(--surface);
-  box-shadow: var(--shadow);
+.home-descriptor {
+  margin: 0 0 22px;
+  color: var(--heading);
+  font-family: var(--font-interface);
+  font-size: clamp(1rem, 1.4vw, 1.16rem);
+  font-weight: 700;
+  letter-spacing: 0.035em;
 }
 
-.compass-principles::before {
+.hero-copy-secondary {
+  margin-top: 16px;
+}
+
+.home-compass {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 390px;
+}
+
+.home-compass::before {
   content: "";
   position: absolute;
-  inset: 10px;
-  border: 1px solid color-mix(in srgb, var(--champagne) 46%, transparent);
-  pointer-events: none;
+  width: min(100%, 390px);
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--champagne) 48%, transparent);
+  border-radius: 50%;
 }
 
-.compass-copy {
+.home-compass-logo {
   position: relative;
-  margin: 12px 0 0;
-  padding: 22px 0 0;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-family: var(--font-editorial);
-  font-size: clamp(1.08rem, 1.45vw, 1.28rem);
-  line-height: 1.7;
+  display: block;
+  width: min(82%, 320px);
+  height: auto;
+  filter: drop-shadow(0 24px 44px rgba(76, 62, 44, 0.15));
+}
+
+.home-compass-logo-dark {
+  display: none;
+}
+
+[data-theme="dark"] .home-compass-logo-light {
+  display: none;
+}
+
+[data-theme="dark"] .home-compass-logo-dark {
+  display: block;
 }
 
 .eyebrow,
@@ -2607,8 +2627,13 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
     font-size: 1.03rem;
   }
 
-  .compass-principles {
-    padding: 26px;
+  .home-compass {
+    min-height: 300px;
+    max-width: 420px;
+  }
+
+  .home-compass-logo {
+    width: min(76%, 280px);
   }
 
   .luna-home-section::after {
