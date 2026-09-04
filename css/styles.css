@@ -303,6 +303,21 @@ main {
   letter-spacing: 0.035em;
 }
 
+.home-hero h1 {
+  font-size: clamp(3rem, 4.7vw, 5rem);
+}
+
+.hero-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.home-hero .hero-copy {
+  max-width: 690px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .hero-copy-secondary {
   margin-top: 16px;
 }
@@ -2648,6 +2663,14 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   h1 {
     font-size: clamp(2.65rem, 13vw, 4rem);
     line-height: 1;
+  }
+
+  .hero-line {
+    white-space: normal;
+  }
+
+  .home-hero .hero-copy {
+    text-align: left;
   }
 
   h2 {
