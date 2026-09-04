@@ -2392,7 +2392,8 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 }
 
 .about-story-heading h2 {
-  max-width: 12ch;
+  max-width: 15ch;
+  font-size: clamp(2rem, 3.4vw, 3.7rem);
 }
 
 .about-story-copy {
@@ -2425,19 +2426,14 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 .about-compass-mark {
   display: grid;
   place-items: center;
-  min-height: 380px;
-  padding: clamp(32px, 4vw, 48px);
-  border: 1px solid color-mix(in srgb, var(--border-strong) 72%, var(--border));
-  background:
-    linear-gradient(150deg, color-mix(in srgb, var(--surface-raised) 96%, transparent), color-mix(in srgb, var(--bg-quiet) 74%, transparent)),
-    var(--surface);
-  box-shadow: var(--shadow);
+  min-height: 220px;
+  padding: 12px;
 }
 
 .about-compass-logo {
   grid-area: 1 / 1;
   display: block;
-  width: min(88%, 310px);
+  width: min(72%, 220px);
   height: auto;
 }
 
@@ -2465,6 +2461,42 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   font-family: var(--font-editorial);
   font-size: clamp(1.35rem, 2vw, 1.85rem);
   line-height: 1.35;
+}
+
+.compass-closing span {
+  display: block;
+}
+
+.about-document-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.about-document-links a {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px 24px;
+  color: var(--heading);
+  text-decoration: none;
+}
+
+.about-document-links a:first-child {
+  border-right: 1px solid var(--border);
+}
+
+.about-document-links span {
+  font-family: var(--font-editorial);
+  font-size: 1.12rem;
+}
+
+.about-document-links strong {
+  color: var(--bronze);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .direction-grid {
@@ -2767,7 +2799,7 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 
   .about-compass-mark {
     max-width: 500px;
-    min-height: 320px;
+    min-height: 190px;
   }
 
   .hero-line {
@@ -2881,6 +2913,15 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
 
   .direction-card {
     min-height: 240px;
+  }
+
+  .about-document-links {
+    grid-template-columns: 1fr;
+  }
+
+  .about-document-links a:first-child {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
   }
 
   .inquiry-card {
