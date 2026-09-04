@@ -1708,6 +1708,16 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   line-height: 1.68;
 }
 
+.service-card .support-label {
+  margin: 2px 0 -8px;
+  color: var(--heading);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
 .service-list {
   display: grid;
   gap: 10px;
