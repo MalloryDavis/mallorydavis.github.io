@@ -2378,6 +2378,95 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   padding-top: clamp(54px, 7vw, 88px);
 }
 
+.about-story {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.64fr) minmax(0, 1fr);
+  gap: clamp(42px, 7vw, 96px);
+  align-items: start;
+  padding-top: clamp(54px, 7vw, 88px);
+}
+
+.about-story-heading {
+  position: sticky;
+  top: 120px;
+}
+
+.about-story-heading h2 {
+  max-width: 12ch;
+}
+
+.about-story-copy {
+  display: grid;
+  gap: 22px;
+  max-width: 760px;
+}
+
+.about-story-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.82;
+}
+
+.about-story-copy .lede {
+  color: var(--heading);
+  font-family: var(--font-editorial);
+  font-size: clamp(1.28rem, 2vw, 1.72rem);
+  line-height: 1.5;
+}
+
+.about-compass-section {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1fr);
+  gap: clamp(42px, 7vw, 96px);
+  align-items: center;
+}
+
+.about-compass-mark {
+  display: grid;
+  place-items: center;
+  min-height: 380px;
+  padding: clamp(32px, 4vw, 48px);
+  border: 1px solid color-mix(in srgb, var(--border-strong) 72%, var(--border));
+  background:
+    linear-gradient(150deg, color-mix(in srgb, var(--surface-raised) 96%, transparent), color-mix(in srgb, var(--bg-quiet) 74%, transparent)),
+    var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.about-compass-logo {
+  grid-area: 1 / 1;
+  display: block;
+  width: min(88%, 310px);
+  height: auto;
+}
+
+.about-compass-logo-dark {
+  display: none;
+}
+
+[data-theme="dark"] .about-compass-logo-light {
+  display: none;
+}
+
+[data-theme="dark"] .about-compass-logo-dark {
+  display: block;
+}
+
+.about-compass-copy p {
+  max-width: 650px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.about-compass-copy .compass-closing {
+  margin-top: 28px;
+  color: var(--heading);
+  font-family: var(--font-editorial);
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  line-height: 1.35;
+}
+
 .direction-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2532,6 +2621,8 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   .luna-value-panel,
   .luna-cta,
   .foundation-section,
+  .about-story,
+  .about-compass-section,
   .about-cta,
   .case-study-card,
   .contact-note,
@@ -2664,6 +2755,19 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
   h1 {
     font-size: clamp(2.65rem, 13vw, 4rem);
     line-height: 1;
+  }
+
+  .about-story-heading {
+    position: static;
+  }
+
+  .about-story-heading h2 {
+    max-width: 18ch;
+  }
+
+  .about-compass-mark {
+    max-width: 500px;
+    min-height: 320px;
   }
 
   .hero-line {
