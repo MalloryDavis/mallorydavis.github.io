@@ -3232,3 +3232,129 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
     gap: 8px;
   }
 }
+
+@media (max-width: 700px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    grid-template-columns: 1fr auto;
+    gap: 14px 18px;
+    padding: 14px 18px 12px;
+  }
+
+  .site-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-nav a {
+    flex: 0 0 auto;
+    font-size: 0.78rem;
+  }
+
+  .hero,
+  .home-hero,
+  .portfolio-page .portfolio-hero,
+  .services-page .services-hero,
+  .luna-risk-page .luna-risk-hero,
+  .about-page .about-hero,
+  .contact-page .contact-hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: start;
+    min-height: auto;
+    padding-top: 44px;
+    padding-bottom: 56px;
+  }
+
+  .hero-content,
+  .luna-hero-copy {
+    max-width: 100%;
+    padding-top: 0;
+    align-content: start;
+  }
+
+  h1,
+  .page-title {
+    max-width: 100%;
+    font-size: clamp(2.42rem, 11vw, 3.55rem);
+    line-height: 1.02;
+  }
+
+  .hero-line {
+    white-space: normal;
+  }
+
+  .hero-copy,
+  .luna-risk-page .hero-copy {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.66;
+  }
+
+  .proof-strip,
+  .signal-strip,
+  .home-capability-strip,
+  .home-working-index,
+  .grid,
+  .grid.two,
+  .work-grid,
+  .focus-grid,
+  .luna-grid,
+  .series-grid,
+  .direction-grid,
+  .artifact-grid,
+  .services-grid,
+  .contact-options-grid,
+  .inquiry-grid,
+  .field-grid,
+  .foundation-list div,
+  .connection-list div,
+  .format-list div,
+  .sequence-list div {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel,
+  .home-compass,
+  .luna-hero-portrait {
+    max-width: 100%;
+  }
+
+  .luna-hero-portrait {
+    order: 2;
+    align-self: start;
+    justify-self: center;
+    width: min(74vw, 252px);
+  }
+
+  .luna-hero-portrait figcaption {
+    right: 26px;
+    bottom: 26px;
+    left: 26px;
+    font-size: 0.58rem;
+    letter-spacing: 0.055em;
+    white-space: nowrap;
+  }
+
+  .page-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
