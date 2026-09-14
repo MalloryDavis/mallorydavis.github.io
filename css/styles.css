@@ -3174,17 +3174,21 @@ body:has(.site-nav a[href="luna-risk.html"][aria-current="page"]) .statement-ban
     width: 120px;
   }
 
-  .about-resource-links {
+.about-resource-links {
     width: min(var(--max-width), calc(100% - 32px));
-  }
+    flex-wrap: nowrap;
+    justify-content: center;
+}
 
-  .about-resource-links a {
-    padding: 8px 14px;
-  }
+.about-resource-links a {
+    padding: 8px 10px;
+    white-space: nowrap;
+    font-size: 0.8rem;
+}
 
-  .about-resource-links a:first-child {
+.about-resource-links a:first-child {
     padding-left: 0;
-  }
+}
 
   .inquiry-card {
     min-height: 190px;
